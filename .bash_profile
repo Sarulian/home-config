@@ -1,18 +1,3 @@
-if [ `uname` = "Darwin" ] ; then
-    # macOS-specific configuration
-    source ~/.bash_profile.darwin.sh
-fi
-
-# set PATH so it includes custom globally-installed node modules
-if [ -d "$HOME/.npm_global/node_modules/.bin" ] ; then
-    PATH="$HOME/.npm_global/node_modules/.bin:$PATH"
-fi
-
-# Set up the n Node version manager
-if [ -x "$HOME/.n/bin/n" ] ; then
-    export N_PREFIX="$HOME/.local"
-    PATH="$HOME/.n/bin:$PATH"
-fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
@@ -49,5 +34,5 @@ export LESS_TERMCAP_ZV=$(tput rsubm)
 export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 
-export EDITOR='nvim'
+export EDITOR='vim'
 

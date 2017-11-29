@@ -2,8 +2,8 @@
 [push]
     default = simple
 [user]
-    name = Stan Zhang
-    email = stan.zhang2@gmail.com
+    name = Sarulian
+    email = tedjamesrobinson@gmail.com
 [core]
     excludesfile = ~/.gitignore_global
     fscache = true
