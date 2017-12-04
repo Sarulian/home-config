@@ -50,7 +50,8 @@ if command -v dircolors > /dev/null ; then
     elif [ -r /etc/DIR_COLORS ]; then
         DIRCOLORS=/etc/DIR_COLORS
     fi
-    eval "$(dircolors -b $DIRCOLORS)"
+    #eval "$(dircolors -b $DIRCOLORS)"
+    eval `dircolors ~/Packages/dircolors-solarized-master/dircolors.256dark`
     unset DIRCOLORS
 
     alias ls='ls --color=auto'
@@ -62,6 +63,8 @@ if command -v dircolors > /dev/null ; then
     alias egrep='egrep --color=auto'
 fi
 
+source ~/Packages/mintty-solarized-dark.sh
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -71,3 +74,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Start tmux up by default
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
