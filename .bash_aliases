@@ -15,4 +15,5 @@ alias mb304='ssh root@15.1.212.165'
 alias ted_target='ssh root@15.1.199.129'
 alias slicer='ssh user3d@15.1.212.214'
 alias thearmory='ssh theodorable@thearmory.sdg.rd.hpicorp.net'
+alias mpts='ssh robinsot@sd-mpts.sdg.rd.hpicorp.net'
 
