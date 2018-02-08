@@ -1,6 +1,6 @@
 # some more ls aliases
-alias ll='ls -la'
-alias la='ls -a'
+alias ll='ls -l'
+alias la='ls -la'
 alias l='ls -CF'
 
 # ssh shortcuts
