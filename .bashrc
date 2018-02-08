@@ -75,8 +75,14 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Start tmux up by default
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#if command -v tmux>/dev/null; then
+#  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#. /home/ted/miniconda2/etc/profile.d/conda.sh
+#conda activate
+
+# added by Miniconda2 installer
+export PATH="/home/ted/miniconda2/bin:$PATH"

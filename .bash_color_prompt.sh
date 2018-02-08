@@ -43,16 +43,17 @@ _prompt_git_status_prefix() {
 }
 
 prompt_callback() {
-    local exitcode=$?
-    if [ $exitcode -eq 0 ]; then
-        local exitstr="\[$_brightblack\]\[$_green\] \$\[$_reset\] "
-    else
-        if [ 128 -lt $exitcode ] && [ $exitcode -lt 192 ]; then
-            exitcode=`kill -l $(($exitcode - 128))`
-        fi
-        local exitstr="\[$_black$_bg_brightred\]\[$_black\] $exitcode \[$_reset$_brightred\] \$\[$_reset\] "
-    fi
-    unset exitcode
+#    local exitcode=$?
+#    if [ $exitcode -eq 0 ]; then
+#        local exitstr="\[$_brightblack\]\[$_green\] \$\[$_reset\] "
+#    else
+#        if [ 128 -lt $exitcode ] && [ $exitcode -lt 192 ]; then
+#            exitcode=`kill -l $(($exitcode - 128))`
+#        fi
+#        local exitstr="\[$_black$_bg_brightred\]\[$_black\] $exitcode \[$_reset$_brightred\] \$\[$_reset\] "
+#    fi
+#    unset exitcode
+    local exitstr="\[$_green\] \$\[$_reset\] "
 
     # re-implement PROMPT_DIRTRIM trimming
     local wdlong=${PWD/$HOME/\~}
@@ -167,10 +168,10 @@ prompt_callback() {
                 "$branch" "$remote" \
                 "$changed" "$conflicts" "$untracked" "$staged" "$stashed"
         else
-            gitstatus="$branch$remote $_prompt_git_status_clean"
+            gitstatus="$branch $_prompt_git_status_clean"
         fi
 
-        gitstatus="\[$_reset$_brightblack\]\[$_white\] $gitstatus "
+        #gitstatus="\[$_reset$_brightblack\]\[$_white\] $gitstatus "
         unset branch dirty
         unset changed conflicts untracked staged stashed
     fi
