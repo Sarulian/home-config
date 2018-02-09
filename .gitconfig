@@ -2,8 +2,8 @@
 [push]
     default = simple
 [user]
-    name = Sarulian
-    email = tedjamesrobinson@gmail.com
+	name = Ted Robinson
+	email = ted.robinson@hp.com
 [core]
     excludesfile = ~/.gitignore_global
     fscache = true
