@@ -33,4 +33,4 @@ export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 
 export EDITOR='vim'
-
+setterm -blength 0 

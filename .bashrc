@@ -87,3 +87,4 @@ fi
 # added by Miniconda2 installer
 export PATH="/home/ted/miniconda2/bin:$PATH"
 export PATH="/home/ted/.local/bin:$PATH"
+export DISPLAY=localhost:0.0
