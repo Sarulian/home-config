@@ -1,6 +1,6 @@
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -lp'
+alias la='ls -lap'
 alias l='ls -CF'
 
 # ssh shortcuts
@@ -11,6 +11,7 @@ alias mb304='ssh root@15.1.212.165'
 alias mb305='ssh root@15.1.212.251'
 alias mb306='ssh root@15.1.212.197'
 alias mb307='ssh root@15.1.212.157'
+alias mb3im='ssh root@15.1.235.55'
 alias mb385bcn='ssh root@15.83.20.141'
 alias mb386bcn='ssh root@15.83.20.209'
 alias mb387bcn='ssh root@15.83.20.234'

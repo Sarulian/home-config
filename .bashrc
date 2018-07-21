@@ -1,90 +1,28 @@
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+########################################################################
+######################## Ted's bashrc file #############################
+########################################################################
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
-command -v lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm*|screen*) color_prompt=yes;;
-esac
-
-if command -v tput > /dev/null && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
-else
-    color_prompt=
-fi
-
-if [ "$color_prompt" == yes ]; then
-    source ~/.bash_color_prompt.sh
-else
-    PS1='\u@\h:\w \$ '
-fi
-unset color_prompt force_color_prompt
-
-# enable color support of ls and also add handy aliases
-if command -v dircolors > /dev/null ; then
-    if [ -r ~/.dircolors ]; then
-        DIRCOLORS=~/.dircolors
-    elif [ -r /etc/DIR_COLORS ]; then
-        DIRCOLORS=/etc/DIR_COLORS
-    fi
-    #eval "$(dircolors -b $DIRCOLORS)"
-    eval `dircolors ~/Packages/dircolors-solarized-master/dircolors.256dark`
-    unset DIRCOLORS
-
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-source ~/Packages/mintty-solarized-dark.sh
+# Colors
+eval "$(dircolors ~/.dircolors)"
+alias ls='ls --color=auto'
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Start tmux up by default
-#if command -v tmux>/dev/null; then
-#  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-#fi
-
+# Fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-#. /home/ted/miniconda2/etc/profile.d/conda.sh
-#conda activate
 
 # added by Miniconda2 installer
 export PATH="/home/ted/miniconda2/bin:$PATH"
 export PATH="/home/ted/.local/bin:$PATH"
 export DISPLAY=localhost:0.0
+
+# Get powerline bash prompt
+source ~/.bash-powerline.sh
+

@@ -1,0 +1,75 @@
+# To use common configuration in %APPDATA%\mintty, simply remove this file
+BoldAsFont=-1
+Transparency=off
+Columns=274
+Rows=72
+Scrollbar=none
+CursorType=block
+# Font=Consolas
+Font=Ubuntu Mono derivative Powerline
+FontHeight=12
+Term=xterm-256color
+
+# Nord colorscheme
+#BackgroundColour=46,52,64
+BackgroundColour=11,12,15
+ForegroundColour=216,222,233
+CursorColour=216,222,233
+Black=59,66,82
+BoldBlack=76,86,106
+Red=191,97,106
+BoldRed=191,97,106
+Green=163,190,140
+BoldGreen=163,190,140
+Yellow=235,203,139
+BoldYellow=235,203,139
+Blue=129,161,193
+BoldBlue=129,161,193
+Magenta=180,142,173
+BoldMagenta=180,142,173
+Cyan=136,192,208
+BoldCyan=143,188,187
+White=229,233,240
+BoldWhite=236,239,244
+
+# mintty-color-schemes base16-shapeshifter-mod-lighten
+#ForegroundColour=171,171,171
+#BackgroundColour=0,0,0
+#CursorColour=253,157,79
+#Black=0,0,0
+#BoldBlack=52,52,52
+#Red=233,47,47
+#BoldRed=240,116,116
+#Green=14,216,57
+#BoldGreen=64,243,102
+#Yellow=221,221,19
+#BoldYellow=240,240,78
+#Blue=59,72,227
+#BoldBlue=125,135,236
+#Magenta=249,150,226
+#BoldMagenta=253,222,246
+#Cyan=35,237,218
+#BoldCyan=107,243,230
+#White=171,171,171
+#BoldWhite=249,249,249
+
+# mintty-color-schemes base16-default-mod
+#ForegroundColour=208,208,208
+#BackgroundColour=21,21,21
+#CursorColour=253,157,79
+#Black=21,21,21
+#BoldBlack=80,80,80
+#Red=172,65,66
+#BoldRed=116,44,45
+#Green=144,169,89
+#BoldGreen=102,119,61
+#Yellow=244,191,117
+#BoldYellow=238,158,45
+#Blue=106,159,181
+#BoldBlue=70,120,141
+#Magenta=170,117,159
+#BoldMagenta=130,80,120
+#Cyan=117,181,170
+#BoldCyan=77,144,133
+#White=208,208,208
+#BoldWhite=245,245,245
