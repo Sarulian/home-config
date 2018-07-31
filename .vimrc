@@ -42,3 +42,6 @@ nnoremap gT :bp<CR>
 
 " Allow for buffer switching without saving
 set hidden
+
+" Save and run python with f5
+nnoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
